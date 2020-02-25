@@ -1,0 +1,33 @@
+h2 {
+    font-family: 'Oswald';
+    font-weight: 500;
+    font-size: 26px;
+}
+
+h3 {
+    font-family: 'Oswald';
+    font-weight: 400;
+    font-size: 22px;
+}
+
+h4 {
+    font-family: 'Oswald';
+    font-weight: 400;
+    font-size: 18px;
+}
+
+.vm-blue-bold {
+    font-family: 'Oswald';
+    font-weight: 700;
+    color: #006fe5;
+}
+
+.vm-signup-button {
+    font-family: 'Oswald';
+    font-weight: 700;
+    font-size: 24px;
+}
+
+.vm-footer-white {
+    color: rgb(255, 255, 255);
+}
