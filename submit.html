@@ -1,0 +1,64 @@
+<html>
+    <head>
+        <link rel="stylesheet" type="text/css" href="reset.css">
+
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Oswald:200,300,400,500,600,700&display=swap">
+
+        <link rel="stylesheet" type="text/css" href="fonts.css">
+        <link rel="stylesheet" type="text/css" href="style.css">
+
+        <title>Vantage Marketing - Join Us!</title>
+    </head>
+
+<body>
+        <center>
+            <div class="vm-header">
+                <div class="vm-header-item">
+                    <img src="Vantage_Text.png" height="80px"></img>
+                </div>
+            </div>
+
+            <div class="vm-content">
+                <form class="vm-content-item" id="vm-signup-form" style="padding: 200px 0px 400px 0px;" method="POST" action="https://script.google.com/macros/s/AKfycbwnOOZD0GJ33CsLXY3BDr4qbUO_VHDtiyiVr8G7sdbtNbHPDHMv/exec">
+                    <span class="vm-form-item">Name:</span>
+                    <input type="text" name="name" placeholder="John Doe" required><br><br>
+                    <span class="vm-form-item">Email:</span>
+                    <input type="text" name="email" placeholder="johndoe@gmail.com" required><br><br>
+                    <span class="vm-form-item">Phone Number:</span>
+                    <input type="text" name="phone" style="margin-right: 92px;" placeholder="(XXX) XXX - XXXX" required><br><br>
+                    <br>
+                    <input type="submit" id="vm-signup-submit" value="Submit">
+                </form>
+
+                <div class="vm-content-item" id="vm-signup-conf" style="display: none; padding: 200px 0px 400px 0px;">
+                    <h3><span class="vm-signup-conf">Thank you for your interest in <span class="vm-blue-bold">Vantage Marketing</span>! We're currently working with our recruits for this summer and have limited time to train more reps. If you're serious about making money this summer, be on the lookout for an <span class="vm-blue-bold">email / phone call</span> from one of our managers!</span></h2>
+                </div>
+            </div>
+
+            <div class="vm-footer">
+                <div class="vm-footer-item"><h4><span class="vm-footer-white">Vantage Marketing 2020</span></h4></div>
+            </div>
+        </center>
+</body>
+</html>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+
+<script type="text/javascript">
+$(document).ready(function(){
+    // References:
+    var $form = $('#vm-signup-form');
+    var $conf = $('#vm-signup-conf');
+    var $subm = $('#vm-signup-submit');
+    var $impt = $form.find(':input').not(':button, :submit, :reset, :hidden');
+
+    // Submit function:
+    $form.submit(function(){
+        $.post($(this).attr('action'), $(this).serialize(), function(response){
+            $form.css('display', 'none');
+            $conf.css('display', 'block');
+        },'json');
+        return false;
+    });
+});
+</script>

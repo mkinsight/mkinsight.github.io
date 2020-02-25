@@ -31,3 +31,9 @@ h4 {
 .vm-footer-white {
     color: rgb(255, 255, 255);
 }
+
+.vm-form-item {
+    font-family: 'Oswald';
+    font-weight: 500;
+    font-size: 26px;
+}
