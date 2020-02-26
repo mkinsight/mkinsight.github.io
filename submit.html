@@ -73,6 +73,11 @@ $(document).ready(function(){
 
     // Submit function:
     $form.submit(function(){
+        fbq('track', 'CompleteRegistration', {
+            value: 1,
+            currency: '0.00',
+        });
+
         $.post($(this).attr('action'), $(this).serialize(), function(response){
             $form.css('display', 'none');
             $conf.css('display', 'block');
